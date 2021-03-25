@@ -1,0 +1,11 @@
+<%- include('partials/head.ejs') %>
+
+<h1>Comments</h1>
+
+<ul>
+    <% for(let c of comments){  %>
+    <li><%= c.comment %> - <b><%= c.username %> </b></li>
+    <% } %>
+</ul>
+
+<%- include('partials/footer.ejs') %>
