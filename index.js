@@ -44,7 +44,7 @@ app.get('/comments/new', (req, res) => {
     res.render('comments/new');
 });
 
-app.post('/comments'(req, res) => {
+app.post('/comments', (req, res) => {
     const {
         username,
         comment
@@ -53,6 +53,7 @@ app.post('/comments'(req, res) => {
         username,
         comment
     });
+    res.redirect('/comments');
 });
 
 app.listen(3000);
