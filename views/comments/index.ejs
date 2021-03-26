@@ -1,26 +1,10 @@
-<%# include('partials/head') %>
-<!DOCTYPE html>
-<html lang="en">
+<%- include('../partials/head') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<h1>Comments</h1>
+<ul>
+    <% for(let c of comments){  %>
+    <li><%= c.comment %> - <b><%= c.username %> </b></li>
+    <% } %>
+</ul>
 
-<body>
-    <h1>Comments</h1>
-    <ul>
-        <% for(let c of comments){  %>
-        <li><%= c.comment %> - <b><%= c.username %> </b></li>
-        <% } %>
-    </ul>
-</body>
-
-</html>
-
-
-
-
-<%# include('partials/footer') %>
+<%- include('../partials/footer') %>
