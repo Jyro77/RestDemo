@@ -9,6 +9,7 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 let comments = [{
@@ -36,7 +37,22 @@ let comments = [{
 app.get('/comments', (req, res) => {
     res.render('comments/index', {
         comments
-    })
-})
+    });
+});
+
+app.get('/comments/new', (req, res) => {
+    res.render('comments/new');
+});
+
+app.post('/comments'(req, res) => {
+    const {
+        username,
+        comment
+    } = req.body;
+    comments.push({
+        username,
+        comment
+    });
+});
 
 app.listen(3000);

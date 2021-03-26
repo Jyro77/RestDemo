@@ -1,10 +1,11 @@
 <%- include('../partials/head') %>
-
-<h1>Comments</h1>
-<ul>
-    <% for(let c of comments){  %>
-    <li><%= c.comment %> - <b><%= c.username %> </b></li>
-    <% } %>
-</ul>
+<div class="container">
+    <h1>Comments</h1>
+    <ul>
+        <% for(let c of comments){  %>
+        <li><%= c.comment %> - <b><%= c.username %> </b></li>
+        <% } %>
+    </ul>
+</div>
 
 <%- include('../partials/footer') %>
