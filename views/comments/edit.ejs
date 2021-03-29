@@ -2,7 +2,13 @@
 
 <div class="container">
     <h1>Edit</h1>
-    <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+    <form method="POST" action="/comments/<%= comment.id %>?_method=PATCH">
+        <textarea name="comment" id="comment" cols="30" rows="5">
+            <%= comment.comment %> 
+        </textarea>
+        <button class="btn btn-info">Save</button>
+    </form>
+    <a href="/comments" class="btn btn-danger">Go Back</a>
 </div>
 
 <%- include('../partials/footer') %>

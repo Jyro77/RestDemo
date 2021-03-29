@@ -1,11 +1,12 @@
 const express = require('express');
+const methodOverride = require('method-override');
 const app = express();
 const path = require('path');
 const {
     v4: uuid
 } = require('uuid');
 
-
+app.use(methodOverride('_method'));
 app.use(express.urlencoded({
     extended: true
 }));
