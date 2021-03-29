@@ -85,8 +85,8 @@ app.patch('/commnets/:id', (req, res) => {
     const {
         id
     } = req.params;
-    const newCommentText = req.body.comment;
     const foundComment = comments.find(c => c.id === id);
+    const newCommentText = req.body.comment;
     foundComment.comment = newCommentText;
     res.redirect('/comments');
 })

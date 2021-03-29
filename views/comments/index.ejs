@@ -4,7 +4,7 @@
     <ul>
         <% for(let c of comments){  %>
         <li>
-            <%= c.comment %> - <b><%= c.username %></b>
+            <%=c.comment%> - <b><%=c.username%></b>
             <a href="/comments/<%= c.id %>">details</a>
         </li>
         <% } %>
