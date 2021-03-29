@@ -1,19 +1,19 @@
 const express = require('express');
-const methodOverride = require('method-override');
+const methodOverride = require('method-override')
 const app = express();
 const path = require('path');
 const {
     v4: uuid
 } = require('uuid');
 
-app.use(methodOverride('_method'));
+app.use(methodOverride('_method'))
 app.use(express.urlencoded({
     extended: true
 }));
-app.use(express.json());
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json())
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'))
+app.use(express.static(path.join(__dirname, 'public')))
 
 
 let comments = [{
@@ -81,7 +81,7 @@ app.get('/comments/:id/edit', (req, res) => {
     })
 })
 
-app.patch('/commnets/:id', (req, res) => {
+app.patch('/comments/:id', (req, res) => {
     const {
         id
     } = req.params;
