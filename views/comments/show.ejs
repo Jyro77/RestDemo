@@ -3,8 +3,8 @@
 <div class="container">
     <h1>Comment ID: <%= comment.id %></h1>
     <h2><%= comment.comment %> - <b><%= comment.username %> </b></h2>
-    <a href="/comments" class="btn btn-danger">Back to comments</a>
-    <a href="/comments/<%= comment.id %>/edit" class="btn btn-danger">Edit Comment</a>
+    <a href="/comments" class="btn btn-primary">Back to comments</a>
+    <a href="/comments/<%= comment.id %>/edit" class="btn btn-warning">Edit Comment</a>
     <form method="POST" action="/comments/<%= comment.id %>?_method=DELETE">
         <button class="btn btn-danger">Delete</button>
     </form>
