@@ -95,7 +95,8 @@ app.delete('/comments/:id', (req, res) => {
     const {
         id
     } = req.params;
-    comments.filter(c => c.id !== id);
+    comments = comments.filter(c => c.id !== id);
+    res.redirect('/comments');
 })
 
 app.listen(3000);

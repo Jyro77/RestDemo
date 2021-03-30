@@ -5,6 +5,9 @@
     <h2><%= comment.comment %> - <b><%= comment.username %> </b></h2>
     <a href="/comments" class="btn btn-danger">Back to comments</a>
     <a href="/comments/<%= comment.id %>/edit" class="btn btn-danger">Edit Comment</a>
+    <form method="POST" action="/comments/<%= comment.id %>?_method=DELETE">
+        <button class="btn btn-danger">Delete</button>
+    </form>
 </div>
 
 <%- include('../partials/footer') %>
