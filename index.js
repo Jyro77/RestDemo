@@ -95,7 +95,6 @@ app.delete('/comments/:id', (req, res) => {
     const {
         id
     } = req.params;
-    const foundComment = comments.find(c => c.id === id);
     comments.filter(c => c.id !== id);
 })
 
