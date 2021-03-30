@@ -91,4 +91,12 @@ app.patch('/comments/:id', (req, res) => {
     res.redirect('/comments');
 })
 
+app.delete('/comments/:id', (req, res) => {
+    const {
+        id
+    } = req.params;
+    const foundComment = comments.find(c => c.id === id);
+    comments.filter(c => c.id !== id);
+})
+
 app.listen(3000);
